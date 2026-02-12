@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  {{> head}}
+</head>
+<body>
+{{> header}}
+
+{{#> content-shell}}
+<section id="section_projects" class="section section_projects">
+  <h3 class="section_title section_title_projects">Projects</h3>
+
+  <div class="project_line">
+    {{#each projects}}
+    {{> project-card}}
+    {{/each}}
+  </div>
+
+  <div class="project_line gallery">
+    {{#each galleryItems}}
+    {{> gallery-item}}
+    {{/each}}
+  </div>
+</section>
+{{/content-shell}}
+
+{{> footer}}
+</body>
+</html>

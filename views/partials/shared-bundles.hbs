@@ -1,0 +1,9 @@
+<link rel="stylesheet" href="/styles/index.css">
+{{#if includeToastify}}
+<link rel="stylesheet" href="/toastify-js/src/toastify.css">
+<script src="/toastify-js/src/toastify.js"></script>
+{{/if}}
+<script src="/script/script.js" defer></script>
+{{#each scripts}}
+<script src="{{this}}" defer></script>
+{{/each}}

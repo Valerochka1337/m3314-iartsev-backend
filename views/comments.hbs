@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  {{> head}}
+</head>
+<body>
+{{> header}}
+
+{{#> content-shell}}
+<section class="section section_constructor">
+  <h3 class="section_title">Comments</h3>
+  <div id="comments">
+    <div id="preloader">
+      <img src="https://www.galvanizeaction.org/wp-content/uploads/2022/06/Wow-gif.gif" alt="Loading...">
+    </div>
+  </div>
+  <div class="error" id="error"></div>
+</section>
+{{/content-shell}}
+
+{{> footer}}
+</body>
+</html>
