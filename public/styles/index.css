@@ -1,0 +1,418 @@
+/* General */
+body {
+    font-family: Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+}
+
+header {
+    display: flex;
+    background: #433878;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+#logo {
+    width: 60px;
+    height: 60px;
+}
+
+#logo-ref {
+    margin-right: auto;
+}
+
+nav ul {
+    flex: 1;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 30px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+nav ul li a.active {
+    font-weight: bold;
+    color: #FFD700;
+}
+
+/* Main */
+main {
+    max-width: 1000px;
+    margin: 20px auto;
+    padding: 20px;
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.section {
+    margin-bottom: 60px;
+    padding: 10px 30px 30px 30px;
+    border-radius: 2em;
+    background-color: rgba(126, 96, 191, 0.26);
+}
+
+.section_title {
+    text-align: center;
+    font-size: 3em;
+}
+
+h1, h3 {
+    color: #333;
+}
+
+.my_face {
+    width: 180px;
+}
+
+.quote_text {
+    font-size: 5em;
+    font-style: italic;
+    text-align: center;
+}
+
+.about_text {
+    font-size: 1.5em;
+}
+
+/* Project Section */
+.project_line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+}
+
+.project {
+    flex: 1;
+    margin: 10px 0 0 10px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background: #fafafa;
+}
+
+.project_img {
+    width: 100%;
+    height: auto;
+}
+
+.project_description {
+    padding: 10px;
+}
+
+.project_title {
+    font-size: 1.2em;
+    margin: 0;
+    color: #0056b3;
+}
+
+.project_list {
+    list-style-type: disc;
+    padding-left: 20px;
+}
+
+/* Gallery Section */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.gallery_item {
+    flex: 1 1 calc(33.333% - 10px);
+    background: #f9f9f9;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.gallery_item img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Code */
+.code {
+    background: #eaeaea;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+.ascii_graphic_ill_be_back {
+    font-family: "Courier New", monospace;
+    white-space: pre;
+    background: #eaeaea;
+    padding: 10px;
+    border-radius: 5px;
+    overflow-x: auto;
+}
+
+/* Table */
+.table-container {
+    display: grid;
+    overflow-x: auto;
+    background-color: #dddddd;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+thead {
+    background-color: #433878;
+    color: #dddddd;
+}
+
+table, th, td {
+    border: 1px solid #433878;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+.table-row:nth-child(even) {
+    background-color: #eaeaea;
+}
+
+/* Footer */
+footer {
+    background: #433878;
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.contacts_title {
+    font-size: 1.2em;
+    margin-top: 0;
+}
+
+.contacts_list {
+    max-width: 600px;
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: auto;
+}
+
+.contacts_list li {
+    flex: 1;
+}
+
+.contacts_list a {
+    color: white;
+    text-decoration: none;
+}
+
+.contacts_list a:hover {
+    text-decoration: underline;
+}
+
+/* Media Queries */
+@media screen and (max-width: 768px) {
+    .project_line {
+        flex-direction: column;
+    }
+
+    .gallery_item {
+        flex: 1 1 100%;
+    }
+
+    .contacts_list {
+        flex-direction: column;
+    }
+
+    .table-container {
+        grid-template-columns: 1fr;
+    }
+
+    .code {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .quote_text {
+        font-size: 2em;
+    }
+
+    .section_title {
+        font-size: 2em;
+    }
+
+    header {
+        flex-direction: column;
+        text-align: left;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    .contacts_list {
+        padding-left: 0;
+    }
+
+    .code {
+        display: none;
+    }
+}
+
+/*Constructor */
+.section_constructor {
+
+    padding: 20px;
+    background: rgba(126, 96, 191, 0.26);
+    border-radius: 10px;
+}
+
+form {
+    display: grid;
+    grid-gap: 15px;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, button {
+    padding: 8px;
+    font-size: 1em;
+}
+
+button {
+    background-color: #433878;
+    color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #5a4f94;
+}
+
+#scheduleResult {
+    margin-top: 20px;
+    padding: 10px;
+    background: #fafafa;
+    border-radius: 8px;
+}
+
+/*  Comments */
+
+#preloader {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+}
+
+#preloader img {
+    width: auto;
+    margin-right: 10px;
+}
+
+
+#comments {
+    margin-top: 20px;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
+}
+
+#comments > div {
+    margin-bottom: 20px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+#comments > div:hover {
+    background-color: #f1f1f1;
+}
+
+#comments h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #333;
+}
+
+#comments p {
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+#comments a {
+    color: #433878;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s ease;
+}
+
+#comments a:hover {
+    color: #333;
+}
+
+
+/* Toastify Styles */
+.toastify {
+    background-color: #433878;
+    color: white;
+    font-size: 1.2em;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+    font-family: Arial, sans-serif;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.toastify .toastify-text {
+    margin: 0;
+    padding: 0;
+}
+
+.toastify-top-right {
+    top: 20px;
+    right: 20px;
+}
+
+.toastify-close-button {
+    color: #FFD700;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 15px;
+}
+
+.toastify-close-button:hover {
+    color: white;
+}
+

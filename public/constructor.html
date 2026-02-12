@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./styles/index.css">
+    <script src="./script/constructor.js" defer></script>
+    <script src="./script/script.js" defer></script>
+    <meta name="keywords" content="table, constructor, schedule">
+    <meta name="description" content="table constructor for schedule">
+    <title>Constructor</title>
+</head>
+<body>
+
+<header>
+    <a id="logo-ref" href="./index.html"><img src="/img/logo.jpg" id="logo" alt="logo"> </a>
+    <nav>
+        <ul>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./projects.html">Projects</a></li>
+            <li><a href="./mycode.html">My code</a></li>
+            <li><a href="./constructor.html">Constructor</a></li>
+            <li><a href="./comments.html">Comments</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+    <section id="section_constructor" class="section section_constructor">
+        <h3 class="section_title">Schedule Constructor</h3>
+
+        <form id="scheduleForm">
+            <label for="days">Choose num of days:</label>
+            <select id="days" name="days">
+                <option value="5">5 days</option>
+                <option value="6">6 days</option>
+            </select>
+
+            <label for="lessons">Max activities:</label>
+            <input type="number" id="lessons" name="lessons" min="1" max="10" value="5">
+
+            <label for="language">Choose language:</label>
+            <select id="language" name="language">
+                <option value="ru">Русский</option>
+                <option value="en">English</option>
+            </select>
+
+            <button type="submit">Generate</button>
+        </form>
+
+        <div id="scheduleResult"></div>
+    </section>
+</main>
+
+<footer>
+    <div class="footer_content">
+        <h4 class="contacts_title">Contacts</h4>
+        <ul class="contacts_list">
+            <li><a href="mailto:info@example.com">Email</a></li>
+            <li><a href="tel:+2281337">Phone</a></li>
+            <li><a href="https://www.linkedin.com/kek" target="_blank">LinkedIn</a></li>
+            <li><a href="https://twitter.com/gui" target="_blank">Twitter</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
