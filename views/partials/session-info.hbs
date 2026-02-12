@@ -1,0 +1,19 @@
+<div class="session_info">
+  {{#if session.isAuthenticated}}
+  <span class="session_label">Logged in as {{session.userName}}</span>
+  <a class="logout_link" href="{{session.logoutUrl}}">Log out</a>
+  {{else}}
+  <form class="auth_form" method="get" action="{{session.loginAction}}">
+    <input type="hidden" name="auth" value="{{session.loginAuthValue}}">
+    <input
+      class="auth_input"
+      type="text"
+      name="user"
+      placeholder="Username"
+      value="{{session.guestUserName}}"
+    >
+    <input class="auth_input" type="password" name="password" placeholder="Password">
+    <button class="auth_button" type="submit">Login</button>
+  </form>
+  {{/if}}
+</div>
