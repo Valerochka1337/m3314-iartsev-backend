@@ -11,6 +11,15 @@ async function bootstrap() {
   app.useStaticAssets(join(__dirname, '..', 'public'), {
     index: false,
   });
+
+  app.use((req, res, next) => {
+    if (req.method === 'GET') {
+      return res.redirect('/index.html');
+    }
+
+    return next();
+  });
+
   app.setBaseViewsDir(join(__dirname, '..', 'views'));
   app.setViewEngine('hbs');
 
